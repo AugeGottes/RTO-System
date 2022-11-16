@@ -15,6 +15,6 @@ def create_license():
     if st.button("Create License"):
         create_table_license()
         add_data_license(lid,aadhar,name,license_no,license_issue_date,license_expiry_date)
-        lula="Ayush"
+        lula=name
         st.success(f"Driving license created for'{lula}'")
 

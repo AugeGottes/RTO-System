@@ -59,6 +59,12 @@ def view_inspector():
     return c.fetchall()
 
 def create_table_license():
+    c.execute('create table if not exists license (lid int ,aadhar varchar(10) ,name varchar(10),license_no int,license_issue_date date,license_expiry_date date,primary key(lid,aadhar),foreign key (aadhar) references  citizen (aadhar))')
+
+
+def add_data_license(lid,aadhar,name,license_no,license_issue_date,license_expiry_date):
+    c.execute("insert into license values (%s,%s,%s,%s,%s,%s)",(lid,aadhar,name,license_no,license_issue_date,license_expiry_date))
+    mydb.commit()
     pass
 def garbage():
     txt = st.text_input("enter sql")

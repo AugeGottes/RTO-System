@@ -10,6 +10,8 @@ from create_dl import create_dl
 from create_inspector import create_inspector
 from read_inspector import read_inspector
 from create_license import create_license
+from PIL import Image
+
 
 def main():
     st.title("Rto system")
@@ -22,6 +24,8 @@ def main():
     if st.button("press if you are inspector"):
         inspector=11
         st.write("enter password")
+        # image = Image.open('sunrise.jpg')
+        # st.image(image, caption='RTO Office pic')
 
     # not inspector case
 
